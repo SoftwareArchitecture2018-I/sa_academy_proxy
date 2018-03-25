@@ -8,7 +8,7 @@ WORKDIR $NODE_ROOT
 
 RUN mkdir log
 
-COPY nginx/app.conf /tmp/app.nginx
+COPY app.conf /tmp/app.nginx
 
 RUN envsubst '$NODE_ROOT' < /tmp/app.nginx > /etc/nginx/conf.d/default.conf
 
